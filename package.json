@@ -1,0 +1,22 @@
+{
+  "name": "koa-apidoc-practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "intoday87",
+  "license": "MIT",
+	"scripts": {
+	 	"run": "node src/index.js",
+		"generate": "apidoc -i src -o apidoc/ -t ./node_modules/apidoc/template/"
+	 },
+  "dependencies": {
+    "apidoc": "^0.17.7",
+    "koa": "^2.7.0"
+  },
+	"apidoc": {
+		"name": "example",
+		"version": "0.1.0",
+		"description": "apiDoc basic example",
+		"title": "Custom apiDoc browser title",
+		"url" : "https://api.github.com/v1"
+	}
+}

@@ -4,19 +4,22 @@
   "main": "index.js",
   "author": "intoday87",
   "license": "MIT",
-	"scripts": {
-	 	"run": "node src/index.js",
-		"generate": "apidoc -i src -o apidoc/ -t ./node_modules/apidoc/template/"
-	 },
-  "dependencies": {
-    "apidoc": "^0.17.7",
-    "koa": "^2.7.0"
+  "scripts": {
+    "run": "node src/index.js 3000",
+    "generate": "apidoc -i src -o apidoc/ -t ./node_modules/apidoc/template/"
   },
-	"apidoc": {
-		"name": "example",
-		"version": "0.1.0",
-		"description": "apiDoc basic example",
-		"title": "Custom apiDoc browser title",
-		"url" : "https://api.github.com/v1"
-	}
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1"
+  },
+  "apidoc": {
+    "name": "example",
+    "version": "0.1.0",
+    "description": "apidoc practice with koa",
+    "title": "apidoc with koa example",
+    "url": "http://localhost:3000"
+  },
+  "devDependencies": {
+    "apidoc": "^0.17.7"
+  }
 }

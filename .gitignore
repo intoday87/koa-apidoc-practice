@@ -1,2 +1,4 @@
 node_modules/
 apidoc/
+.idea/
+.DS_Store

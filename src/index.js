@@ -1,18 +1,27 @@
 const Koa = require('koa');
 const app = new Koa();
+const bodyparser = require('koa-bodyparser');
+
+app.use(bodyparser());
 
 /**
- * @api {get} /user/:id Request User information
- * @apiName GetUser
- * @apiGroup User
+ * @api {get} / Request say hello
+ * @apiName hello
+ * @apiGroup hello_world
+ * @apiVersion 0.2.0
  *
- * @apiParam {Number} id Users unique ID.
+ * @apiParam {String} firstName included with response hello message
+ * @apiParam {String} lastName included with response hello message
  *
- * @apiSuccess {String} firstname Firstname of the User.
- * @apiSuccess {String} lastname  Lastname of the User.
+ * @apiSuccessExample Example data on success
+ * hello {lastName} {firstName}
+ *
+ * @apiError 400 invalid request param
+ *
+ * @apiSampleRequest http://localhost:3000
  */
 app.use(async (ctx) => {
-	ctx.body = 'hello world';	
+  ctx.body = `hello ${ctx.request.body.lastName} ${ctx.request.body.firstName}`;
 });
 
 app.listen(process.argv[2]);

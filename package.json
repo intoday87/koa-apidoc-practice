@@ -5,7 +5,7 @@
   "author": "intoday87",
   "license": "MIT",
   "scripts": {
-    "run": "node src/index.js 3000",
+    "start": "node src/index.js 3000",
     "generate": "apidoc -i src -o apidoc/ -t ./node_modules/apidoc/template/"
   },
   "dependencies": {
